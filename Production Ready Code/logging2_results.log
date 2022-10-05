@@ -1,0 +1,7 @@
+2022-10-06 00:40:16,727 - ERROR - denominator cannot be zero
+2022-10-06 00:40:16,727 - INFO - SUCCESS: divide_vals function
+2022-10-06 00:40:16,727 - INFO - SUCCESS: divide_vals function
+2022-10-06 00:40:16,727 - ERROR - numerator must be a float
+2022-10-06 00:40:16,728 - ERROR - text must be a string
+2022-10-06 00:40:16,728 - INFO - SUCCESS: num_words function
+2022-10-06 00:40:16,728 - INFO - SUCCESS: num_words function

@@ -1,0 +1,50 @@
+import pandas as pd
+import pytest
+import logging
+
+# Test function
+# See the `pytest.df = df` statement to store the variable in Namespace
+def test_import_data():
+  try:
+      df = pd.import_data("./data/bank_data.csv")
+  except FileNotFoundError as err:
+      logging.error("File not found")
+      raise err
+  '''
+  Some assertion statements per your requirement.
+  '''
+  pytest.df = df
+  return df
+
+
+# Test function
+# See the `df = pytest.df` statement accessing the Dataframe object from Namespace
+def test_function_two():
+  df = pytest.df
+  '''
+  Some assertion statements per your requirement.
+  '''
+
+#   Cahch approach
+
+# Test function 
+# It uses the built-in request fixture
+def test_import_data(request):
+  try:
+      df = pd.import_data("./data/bank_data.csv")
+  except FileNotFoundError as err:
+      logging.error("File not found")
+      raise err
+  '''
+  Some assertion statements per your requirement.
+  '''
+
+  request.config.cache.set('cache_df', df)
+  return df
+
+  # Test function
+def test_function_two(request):
+  df = request.config.cache.get('cache_df', None)
+  '''
+  Some assertion statements per your requirement.
+  '''
