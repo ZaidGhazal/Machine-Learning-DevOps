@@ -170,6 +170,7 @@ def classification_report_image(y_train,
                             None
     '''
     # save classification report for training % testing data
+    plt.clf()
     plt.rc('figure', figsize=(5, 5))
     plt.text(0.01, 1.25, str('Random Forest Train'), {
              'fontsize': 10}, fontproperties='monospace')
@@ -182,6 +183,7 @@ def classification_report_image(y_train,
     plt.axis('off')
     plt.savefig("images/results/random_forest_classification_report.png")
 
+    plt.clf()
     plt.rc('figure', figsize=(5, 5))
     plt.text(0.01, 1.25, str('Logistic Regression Train'),
              {'fontsize': 10}, fontproperties='monospace')
