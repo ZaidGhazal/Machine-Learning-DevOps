@@ -53,6 +53,7 @@ def go(args):
 
     logger.info("Logging artifact")
     run.log_artifact(artifact)
+    logger.info("SUCCESS: clean_data.csv has been logged to W&B")
 
 
 if __name__ == "__main__":
